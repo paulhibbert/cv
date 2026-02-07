@@ -74,6 +74,7 @@
             grid-area: 1/2/1/2;
             padding-right: 1em;
             align-self: center;
+            cursor: help;
         }
 
         .collapsible-article span {
@@ -98,6 +99,17 @@
             opacity: 0;
             max-height: 0;
             border: none;
+        }
+
+        .collapsible-article label:before {
+            font: 70% sans-serif;
+            content: "▼";
+            margin-right: .25em;
+        }
+
+        .collapsible-article input[type="checkbox"]:checked~label:before {
+            content: "";
+            margin-right: reset;
         }
 
         .collapsible-menu {
@@ -253,7 +265,7 @@
 <body>
     <div class="grid-container">
         <nav class="collapsible-menu">
-            <input type="checkbox" checked>
+            <input id="hamburger" type="checkbox" checked>
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -321,8 +333,8 @@
                 </span>
             </h2>
             <article class="collapsible-article">
-                <label>Corpus Christi College, Oxford</label>
-                <input type="checkbox" checked>
+                <input id="ccc" type="checkbox" checked>
+                <label for="ccc">Corpus Christi College, Oxford</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -339,8 +351,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Stockport Grammar School</label>
-                <input type="checkbox" checked>
+                <input id="sgs" type="checkbox" checked>
+                <label for="sgs">Stockport Grammar School</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -352,7 +364,8 @@
                 <div>
                     <p>1974-1981</p>
                     <p>School Medal, Head of School, 1981</p>
-                    <p>GCE A Level: History (A1), Latin (A2), Greek (B), French (B), General Studies (A)</p>
+                    <p>GCE S Level: History(1), Latin(2)</p>
+                    <p>GCE A Level: History (A), Latin (2), Greek (B), French (B), General Studies (A)</p>
                     <p>GCE O Level: Maths (A), English (B), Eng, Lit. (B), History (B), Geography (A), Latin (A), German
                         (B), Spanish (A), French (A), Biology (A), Woodwork (B)</p>
                 </div>
@@ -367,8 +380,8 @@
                 </span>
             </h2>
             <article class="collapsible-article">
-                <label>Senior Developer, E-commerce, 2025</label>
-                <input type="checkbox" checked>
+                <input id="onbuy" type="checkbox" checked>
+                <label for="onbuy">Senior Developer, E-commerce, 2025</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -390,8 +403,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Senior Developer, Clinical Trials Payments, 2023</label>
-                <input type="checkbox" checked>
+                <input id="skyelarke" type="checkbox" checked>
+                <label for="skyelarke">Senior Developer, Clinical Trials Payments, 2023</label>                
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -413,8 +426,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Senior Systems Developer, Insurance, 2020</label>
-                <input type="checkbox" checked>
+                <input id="reassured" type="checkbox" checked>
+                <label for="reassured">Senior Systems Developer, Insurance, 2020</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -433,8 +446,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Web Developer, Agency, 2018</label>
-                <input type="checkbox" checked>
+                <input id="lightflows" type="checkbox" checked>
+                <label for="lightflows">Web Developer, Agency, 2018</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -454,8 +467,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Co-Founder & Business Development Director, 2017</label>
-                <input type="checkbox" checked>
+                <input id="handpicked" type="checkbox" checked>
+                <label for="handpicked">Co-Founder & Business Development Director, 2017</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -478,8 +491,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Head of IT & Development, E-commerce, 2016</label>
-                <input type="checkbox" checked>
+                <input id="pharmacy" type="checkbox" checked>
+                <label for="pharmacy">Head of IT & Development, E-commerce, 2016</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -510,8 +523,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Professional Photographer, 2007</label>
-                <input type="checkbox" checked>
+                <input id="photographer" type="checkbox" checked>
+                <label for="photographer">Professional Photographer, 2007</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -534,8 +547,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Senior Director, Technology Strategy, 2000 (and CTO from 2003)</label>
-                <input type="checkbox" checked>
+                <input id="infonetcto" type="checkbox" checked>
+                <label for="infonetcto">Senior Director, Technology Strategy, 2000 (and CTO from 2003)</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -566,8 +579,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>European Technical Sales Support, 1998</label>
-                <input type="checkbox" checked>
+                <input id="infoneteu" type="checkbox" checked>
+                <label for="infoneteu">European Technical Sales Support, 1998</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -590,8 +603,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Head of Solution Engineering, 1995</label>
-                <input type="checkbox" checked>
+                <input id="infonetuk" type="checkbox" checked>
+                <label for="infonetuk">Head of Solution Engineering, 1995</label>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -612,8 +625,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Team Leader, Programming & PC/Network Support, 1989</label>
-                <input type="checkbox" checked>
+                <input id="perkins" type="checkbox" checked>
+                <label for="perkins">Team Leader, Programming & PC/Network Support, 1989</label>                
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -638,8 +651,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Trainee Programmer, 1988</label>
-                <input type="checkbox" checked>
+                <input id="britishrail" type="checkbox" checked>
+                <label for="britishrail">Trainee Programmer, 1988</label>                
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -658,8 +671,8 @@
                 </div>
             </article>
             <article class="collapsible-article">
-                <label>Clerk to Treasury & Civil Service Sub-Committee, 1986</label>
-                <input type="checkbox" checked>
+                <input id="hoc" type="checkbox" checked>
+                <label for="hoc">Clerk to Treasury & Civil Service Sub-Committee, 1986</label>                
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
